@@ -1,0 +1,115 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12">
+            <h1>creative</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-xl-2">
+            <p>site</p>
+            <p>action</p>
+        </div>
+
+        <div class="col-xl-10 maincon">
+            <!-- side form -->
+            <div class="form">
+                <button class="btn btn-danger" style="position: relative; top: 13px;">PLANNED</button>
+                <p class="plan"></p>
+                <form [formGroup]="form">
+                    <div class="form-group">
+                        <label>visit type</label>
+                        <input type="text" class="form-control" formControlName="Name" placeholder="SMV report">
+                    </div>
+
+                    <div class="form-group">
+                        <label>site</label>
+                        <input type="text" formControlName="age" class="form-control"
+                            placeholder="Ramachandra hospital">
+                    </div>
+
+                    <div class="form-group">
+                        <label>visit start date</label>
+                        <input type="date" formControlName="age" class="form-control" >
+                    </div>
+
+                    <div class="form-group">
+                        <label>visit end date</label>
+                        <input type="date" formControlName="age" class="form-control" >
+                    </div>
+
+                    <!-- 
+                    <label for="state">STATE</label>
+                    <select name="state" class="form-control" id="" formControlName="state">
+                        <option value="t">TN</option>
+                        <option value="a">AP</option>
+                        <option value="1" selected>UP</option>
+                    </select>
+
+                    <p class="gender" style="margin-top: 20PX;">GENDER</p>
+                    <input type="radio" name="gender" class="gender1" value="male"> MALE <br>
+                    <input type="radio" name="gender" class="gender2" value="female"> FEMALE -->
+
+                    <!-- <button [roughtLink]="['letter']">click</button> -->
+                    <a  routerLink="/letter"> click</a>
+
+                </form>
+            </div>
+            <!-- main contant -->
+            <p style="font-size:25px;">SMV Confermation letter</p>
+            <p style="font-size:15px; top: -28px; position: relative;">site 1</p>
+            <h3 style="float: right;  top: -85px; position: relative;">Visitor 1</h3>
+            <div class="row">
+                <div class="col-xl-12"> 
+                    <textarea type="text" class="form-control"  placeholder="commends" style="position: relative; top: -20px;"> </textarea></div>
+            </div>
+            <!-- radio button -->
+            <div>
+                <p>Pharmacy visit</p>
+                <div class="form-check-inline" style="top: -40px; left: 130px; position: relative;">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optradio">Yes
+                    </label>
+                </div>
+                <div class="form-check-inline" style="top: -40px; left: 150px; position: relative;">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optradio"> <span style="top: -25px; left: 15px; position: relative;">no</span> 
+                    </label>
+                    <input type="date" class="form-control" style="position: relative; left: 30px; top: -10px;">
+                    <button class="btn btn-danger" style="position: relative; left: 300px; top: -10px;" [routerLink]="['/letter']" (click)='fun()' >priview</button>
+                </div>
+            </div>
+
+            <!-- head 01 -->
+            <div class="row">
+                <div class="col-xl-12" >
+                        <ng-multiselect-dropdown
+                        [placeholder]="'custom placeholder'"
+                        [data]="dropdownList"
+                        [(ngModel)]="selectedItems"
+                        [settings]="dropdownSettings"
+                        (onSelect)="onItemSelect($event)"
+                        (onSelectAll)="onSelectAll($event)"
+                      >
+                      </ng-multiselect-dropdown>
+                </div>
+            </div>
+            <!-- head 02 -->
+            <div class="row" style="position: relative;top: 50px;">
+                    <div class="col-xl-12">
+                        <ng-multiselect-dropdown
+                        [placeholder]="'custom placeholder'"
+                        [data]="dropdownList"
+                        [(ngModel)]="selectedItems"
+                        [settings]="dropdownSettings"
+                        (onSelect)="onItemSelect($event)"
+                        (onSelectAll)="onSelectAll($event)"
+                      >
+                      </ng-multiselect-dropdown>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <popup>hiokokojjkilhli</popup> -->
